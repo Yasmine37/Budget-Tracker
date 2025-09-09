@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login_container">
+    <div id="login_page">
+      <h1>Your Budget Tracker</h1>
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter username" required />
+      <button class="btn">Login</button>
+    </div>
+  </div>
+
+  <div id="app" style="display: none;">
+    <div id="dashboard">
+      <h1>Your Budget Tracker</h1>
+      <h2 id="dashboard-heading">Dashboard</h2>
+      <h3>Add Transaction</h3>
+      <form id="form">
+        <label><input type="radio" id="income" name="type" /> Income</label>
+        <label><input type="radio" id="expense" name="type" /> Expense</label>
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="text" id="category" placeholder="Category (optional)" />
+        <button class="btn" type="button">Add</button>
+      </form>
+    </div>
+
+    <div id="summary">
+      <h3>Summary</h3>
+      <p>Total Income: <span id="total-income">0</span></p>
+      <p>Total Expenses: <span id="total-expense">0</span></p>
+      <p>Total Balance: <span id="total">0</span></p>
+      <h3>Transaction History</h3>
+      <ol id="transaction-list"></ol>
+    </div>
+
+    <button class="btn" id="Logout">Logout</button>
+  </div>
+
+  <button id="toggle-dark">Dark/Light Mode🌙</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
